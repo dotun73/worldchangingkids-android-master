@@ -12,23 +12,18 @@
         android:id="@+id/childTitle"
         android:layout_width="486dp"
         android:layout_height="68dp"
-        android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
         android:layout_marginBottom="20dp"
         android:background="@drawable/login_title"
         android:text="@string/create_child_account"
         android:textAlignment="center"
         app:autoSizeTextType="uniform"
         app:fontFamily="@font/justthewayyouare"
-        app:layout_constraintBottom_toTopOf="@+id/image_btn_avatar_three"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintBottom_toTopOf="@+id/custom_avatar"
+        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-         />
-
+        app:layout_constraintRight_toRightOf="parent" />
 
     <EditText
         android:id="@+id/name"
@@ -234,74 +229,87 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.47" />
 
-    <ImageButton
-        android:id="@+id/image_btn_avatar_one"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:scaleType="centerCrop"
-        android:layout_marginBottom="20dp"
-        android:layout_centerVertical="true"
-        android:background="@drawable/avatar1"
-        app:layout_constraintHorizontal_bias="0.1"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/name"
-        android:src="@drawable/avatar1" />
+<!--    <ImageButton-->
+<!--        android:id="@+id/image_btn_avatar_one"-->
+<!--        android:layout_width="100dp"-->
+<!--        android:layout_height="100dp"-->
+<!--        android:scaleType="centerCrop"-->
+<!--        android:layout_marginBottom="20dp"-->
+<!--        android:layout_centerVertical="true"-->
+<!--        android:background="@drawable/avatar1"-->
+<!--        app:layout_constraintHorizontal_bias="0.1"-->
+<!--        app:layout_constraintLeft_toLeftOf="parent"-->
+<!--        app:layout_constraintRight_toRightOf="parent"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/name"-->
+<!--        android:src="@drawable/avatar1" />-->
+
+<!--    <ImageButton-->
+<!--        android:id="@+id/image_btn_avatar_two"-->
+<!--        android:layout_width="100dp"-->
+<!--        android:layout_height="100dp"-->
+<!--        android:scaleType="centerCrop"-->
+<!--        android:layout_marginBottom="20dp"-->
+<!--        android:layout_centerVertical="true"-->
+<!--        android:background="@drawable/avatar2"-->
+<!--        app:layout_constraintHorizontal_bias="0.3"-->
+<!--        app:layout_constraintLeft_toLeftOf="parent"-->
+<!--        app:layout_constraintRight_toRightOf="parent"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/name"-->
+<!--        android:src="@drawable/avatar2" />-->
+
+<!--    <ImageButton-->
+<!--        android:id="@+id/image_btn_avatar_three"-->
+<!--        android:layout_width="100dp"-->
+<!--        android:layout_height="100dp"-->
+<!--        android:scaleType="centerCrop"-->
+<!--        android:layout_marginBottom="20dp"-->
+<!--        android:layout_centerVertical="true"-->
+<!--        android:background="@drawable/avatar3"-->
+<!--        app:layout_constraintHorizontal_bias="0.5"-->
+<!--        app:layout_constraintLeft_toLeftOf="parent"-->
+<!--        app:layout_constraintRight_toRightOf="parent"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/name"-->
+<!--        android:src="@drawable/avatar3" />-->
+
+<!--    <ImageButton-->
+<!--        android:id="@+id/image_btn_avatar_four"-->
+<!--        android:layout_width="100dp"-->
+<!--        android:layout_height="100dp"-->
+<!--        android:scaleType="centerCrop"-->
+<!--        android:layout_marginBottom="20dp"-->
+<!--        android:layout_centerVertical="true"-->
+<!--        android:background="@drawable/avatar4"-->
+<!--        app:layout_constraintHorizontal_bias="0.7"-->
+<!--        app:layout_constraintLeft_toLeftOf="parent"-->
+<!--        app:layout_constraintRight_toRightOf="parent"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/name"-->
+<!--        android:src="@drawable/avatar4" />-->
+
+<!--    <ImageButton-->
+<!--        android:id="@+id/image_btn_avatar_five"-->
+<!--        android:layout_width="100dp"-->
+<!--        android:layout_height="100dp"-->
+<!--        android:scaleType="centerCrop"-->
+<!--        android:layout_marginBottom="20dp"-->
+<!--        android:layout_centerVertical="true"-->
+<!--        android:background="@drawable/avatar5"-->
+<!--        app:layout_constraintHorizontal_bias="0.9"-->
+<!--        app:layout_constraintLeft_toLeftOf="parent"-->
+<!--        app:layout_constraintRight_toRightOf="parent"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/name"-->
+<!--        android:src="@drawable/avatar5" />-->
 
     <ImageButton
-        android:id="@+id/image_btn_avatar_two"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:scaleType="centerCrop"
-        android:layout_marginBottom="20dp"
+        android:id="@+id/custom_avatar"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
         android:layout_centerVertical="true"
-        android:background="@drawable/avatar2"
-        app:layout_constraintHorizontal_bias="0.3"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/name"
-        android:src="@drawable/avatar2" />
-
-    <ImageButton
-        android:id="@+id/image_btn_avatar_three"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_marginBottom="48dp"
         android:scaleType="centerCrop"
-        android:layout_marginBottom="20dp"
-        android:layout_centerVertical="true"
-        android:background="@drawable/avatar3"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        android:src="@drawable/user"
         app:layout_constraintBottom_toTopOf="@+id/name"
-        android:src="@drawable/avatar3" />
-
-    <ImageButton
-        android:id="@+id/image_btn_avatar_four"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:scaleType="centerCrop"
-        android:layout_marginBottom="20dp"
-        android:layout_centerVertical="true"
-        android:background="@drawable/avatar4"
-        app:layout_constraintHorizontal_bias="0.7"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/name"
-        android:src="@drawable/avatar4" />
-
-    <ImageButton
-        android:id="@+id/image_btn_avatar_five"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:scaleType="centerCrop"
-        android:layout_marginBottom="20dp"
-        android:layout_centerVertical="true"
-        android:background="@drawable/avatar5"
-        app:layout_constraintHorizontal_bias="0.9"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/name"
-        android:src="@drawable/avatar5" />
+        app:layout_constraintRight_toRightOf="parent" />
 
 </android.support.constraint.ConstraintLayout>
