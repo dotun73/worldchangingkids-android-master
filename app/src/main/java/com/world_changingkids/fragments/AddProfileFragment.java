@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -39,11 +40,13 @@ public class AddProfileFragment extends Fragment {
     private EditText AGE;
     private Button savebtn;
     private Button backbtn;
-    private ImageButton avatarButtonOne;
-    private ImageButton avatarButtonTwo;
-    private ImageButton avatarButtonThree;
-    private ImageButton avatarButtonFour;
-    private ImageButton avatarButtonFive;
+    private ImageButton avatar;
+    private TextView text;
+//    private ImageButton avatarButtonOne;
+//    private ImageButton avatarButtonTwo;
+//    private ImageButton avatarButtonThree;
+//    private ImageButton avatarButtonFour;
+//    private ImageButton avatarButtonFive;
     private NavController mNavController;
     private FirebaseAuth mAuth;
     private CollectionReference accounts;
@@ -91,60 +94,61 @@ public class AddProfileFragment extends Fragment {
      * To set avatar with border if it has been selected
      * @param index
      */
-    private void setAvatarSelected(int index){
-        this.grade=index;
-        switch(index) {
-            case 1:
-                avatarButtonOne.setImageResource(R.drawable.avatar_border);
-                avatarButtonTwo.setImageResource(R.color.transparent);
-                avatarButtonThree.setImageResource(R.color.transparent);
-                avatarButtonFour.setImageResource(R.color.transparent);
-                avatarButtonFive.setImageResource(R.color.transparent);
-                break;
-            case 2:
-                avatarButtonOne.setImageResource(R.color.transparent);
-                avatarButtonTwo.setImageResource(R.drawable.avatar_border);
-                avatarButtonThree.setImageResource(R.color.transparent);
-                avatarButtonFour.setImageResource(R.color.transparent);
-                avatarButtonFive.setImageResource(R.color.transparent);
-                break;
-            case 3:
-                avatarButtonOne.setImageResource(R.color.transparent);
-                avatarButtonTwo.setImageResource(R.color.transparent);
-                avatarButtonThree.setImageResource(R.drawable.avatar_border);
-                avatarButtonFour.setImageResource(R.color.transparent);
-                avatarButtonFive.setImageResource(R.color.transparent);
-                break;
-            case 4:
-                avatarButtonOne.setImageResource(R.color.transparent);
-                avatarButtonTwo.setImageResource(R.color.transparent);
-                avatarButtonThree.setImageResource(R.color.transparent);
-                avatarButtonFour.setImageResource(R.drawable.avatar_border);
-                avatarButtonFive.setImageResource(R.color.transparent);
-                break;
-            case 5:
-                avatarButtonOne.setImageResource(R.color.transparent);
-                avatarButtonTwo.setImageResource(R.color.transparent);
-                avatarButtonThree.setImageResource(R.color.transparent);
-                avatarButtonFour.setImageResource(R.color.transparent);
-                avatarButtonFive.setImageResource(R.drawable.avatar_border);
-                break;
-        }
-
-
-    }
+//    private void setAvatarSelected(int index){
+//        this.grade=index;
+//        switch(index) {
+//            case 1:
+//                avatarButtonOne.setImageResource(R.drawable.avatar_border);
+//                avatarButtonTwo.setImageResource(R.color.transparent);
+//                avatarButtonThree.setImageResource(R.color.transparent);
+//                avatarButtonFour.setImageResource(R.color.transparent);
+//                avatarButtonFive.setImageResource(R.color.transparent);
+//                break;
+//            case 2:
+//                avatarButtonOne.setImageResource(R.color.transparent);
+//                avatarButtonTwo.setImageResource(R.drawable.avatar_border);
+//                avatarButtonThree.setImageResource(R.color.transparent);
+//                avatarButtonFour.setImageResource(R.color.transparent);
+//                avatarButtonFive.setImageResource(R.color.transparent);
+//                break;
+//            case 3:
+//                avatarButtonOne.setImageResource(R.color.transparent);
+//                avatarButtonTwo.setImageResource(R.color.transparent);
+//                avatarButtonThree.setImageResource(R.drawable.avatar_border);
+//                avatarButtonFour.setImageResource(R.color.transparent);
+//                avatarButtonFive.setImageResource(R.color.transparent);
+//                break;
+//            case 4:
+//                avatarButtonOne.setImageResource(R.color.transparent);
+//                avatarButtonTwo.setImageResource(R.color.transparent);
+//                avatarButtonThree.setImageResource(R.color.transparent);
+//                avatarButtonFour.setImageResource(R.drawable.avatar_border);
+//                avatarButtonFive.setImageResource(R.color.transparent);
+//                break;
+//            case 5:
+//                avatarButtonOne.setImageResource(R.color.transparent);
+//                avatarButtonTwo.setImageResource(R.color.transparent);
+//                avatarButtonThree.setImageResource(R.color.transparent);
+//                avatarButtonFour.setImageResource(R.color.transparent);
+//                avatarButtonFive.setImageResource(R.drawable.avatar_border);
+//                break;
+//        }
+//
+//
+//    }
 
     /**
      * Bind actions to views
      * @param view
      */
     public void setUpFragment(View view) {
-        avatarButtonOne = view.findViewById(R.id.image_btn_avatar_one);
-        avatarButtonTwo = view.findViewById(R.id.image_btn_avatar_two);
-        avatarButtonThree = view.findViewById(R.id.image_btn_avatar_three);
-        avatarButtonFour = view.findViewById(R.id.image_btn_avatar_four);
-        avatarButtonFive = view.findViewById(R.id.image_btn_avatar_five);
-        NAME = view.findViewById(R.id.name);
+//        avatarButtonOne = view.findViewById(R.id.image_btn_avatar_one);
+//        avatarButtonTwo = view.findViewById(R.id.image_btn_avatar_two);
+//        avatarButtonThree = view.findViewById(R.id.image_btn_avatar_three);
+//        avatarButtonFour = view.findViewById(R.id.image_btn_avatar_four);
+//        avatarButtonFive = view.findViewById(R.id.image_btn_avatar_five);
+        avatar = view.findViewById(R.id.custom_avatar);
+        text = view.findViewById(R.id.custom_text);
         AGE = view.findViewById(R.id.age);
         savebtn = view.findViewById(R.id.savebtn);
         backbtn = view.findViewById(R.id.leftArrow_back);
@@ -176,40 +180,40 @@ public class AddProfileFragment extends Fragment {
             }
         });
 
-        avatarButtonOne.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                setAvatarSelected(1);
-            }
-        });
-
-        avatarButtonTwo.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                setAvatarSelected(2);
-            }
-        });
-
-        avatarButtonThree.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                setAvatarSelected(3);
-            }
-        });
-
-        avatarButtonFour.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                setAvatarSelected(4);
-            }
-        });
-
-        avatarButtonFive.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                setAvatarSelected(5);
-            }
-        });
+//        avatarButtonOne.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                setAvatarSelected(1);
+//            }
+//        });
+//
+//        avatarButtonTwo.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                setAvatarSelected(2);
+//            }
+//        });
+//
+//        avatarButtonThree.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                setAvatarSelected(3);
+//            }
+//        });
+//
+//        avatarButtonFour.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                setAvatarSelected(4);
+//            }
+//        });
+//
+//        avatarButtonFive.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                setAvatarSelected(5);
+//            }
+//        });
     }
 
     /**

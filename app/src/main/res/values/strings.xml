@@ -58,6 +58,7 @@
     <string name="avatar_head_title">Head</string>
     <string name="avatar_all_title">All</string>
     <string name="avatar_save_button">Save Avatar</string>
+    <string name="custom_text">Choose avatar</string>
 
     <!-- Act Of Kindness Page-->
     <string name="community_filter">Community</string>
