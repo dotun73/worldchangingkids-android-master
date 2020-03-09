@@ -194,8 +194,6 @@ public class ActOfKindnessDetailsFragment extends BaseFullScreenFragment {
 		});
 
 		cameraButton = v.findViewById(R.id.camera_button);
-		Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-		startActivityForResult(intent,0);
 
 		return v;
 	}
