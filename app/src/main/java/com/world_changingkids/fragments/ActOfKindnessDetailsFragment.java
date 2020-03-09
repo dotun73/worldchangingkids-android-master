@@ -2,8 +2,10 @@ package com.world_changingkids.fragments;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Point;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.support.annotation.Nullable;
 import android.text.Editable;
 import android.text.TextUtils;
@@ -60,6 +62,7 @@ public class ActOfKindnessDetailsFragment extends BaseFullScreenFragment {
 	private ImageView mPlayPauseMediaImageView;
 	private ToggleButton mDoneToggleButton;
 	private ImageButton mCloseDialogButton;
+	private ImageButton cameraButton;
 
 	//han
 //	Context context;
@@ -189,6 +192,10 @@ public class ActOfKindnessDetailsFragment extends BaseFullScreenFragment {
 				destroyDetailsFragment();
 			}
 		});
+
+		cameraButton = v.findViewById(R.id.camera_button);
+		Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+		startActivityForResult(intent,0);
 
 		return v;
 	}
