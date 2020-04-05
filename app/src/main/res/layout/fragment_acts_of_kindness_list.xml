@@ -10,107 +10,42 @@
     <android.support.constraint.Guideline
         android:id="@+id/guideline"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="100dp"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="90dp" />
+        app:layout_constraintGuide_end="5dp" />
+
 
     <ToggleButton
-        android:id="@+id/toggle_button_giving"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginBottom="8dp"
-        android:background="@drawable/selector_giving_filter"
+        android:id="@+id/toggle_button_reward"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="1188dp"
+        android:layout_marginLeft="1188dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/virtual_reward_icon"
         android:checked="true"
-
         android:text=""
         android:textOff=""
-
         android:textOn=""
-        app:layout_constraintBottom_toTopOf="@+id/frameLayout"
-        app:layout_constraintEnd_toStartOf="@+id/toggle_button_list"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/toggle_button_family"
-        app:layout_constraintTop_toTopOf="@+id/toggle_button_family" />
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"/>
 
     <ToggleButton
         android:id="@+id/toggle_button_list"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginBottom="8dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginRight="48dp"
         android:background="@drawable/filter_list"
         android:checked="true"
-
         android:text=""
         android:textOff=""
         android:textOn=""
         app:layout_constraintBottom_toTopOf="@+id/frameLayout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/toggle_button_giving"
-        app:layout_constraintTop_toTopOf="@+id/toggle_button_giving" />
-
-    <ToggleButton
-        android:id="@+id/toggle_button_community"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginBottom="8dp"
-        android:background="@drawable/selector_community_filter"
-        android:checked="true"
-        android:text=""
-        android:textOff=""
-        android:textOn=""
-        app:layout_constraintBottom_toTopOf="@+id/guideline"
-        app:layout_constraintEnd_toStartOf="@+id/toggle_button_cooking"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <ToggleButton
-        android:id="@+id/toggle_button_cooking"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginBottom="8dp"
-        android:background="@drawable/selector_cooking_filter"
-        android:checked="true"
-        android:text=""
-        android:textOff=""
-        android:textOn=""
-        app:layout_constraintBottom_toTopOf="@+id/guideline"
-        app:layout_constraintEnd_toStartOf="@+id/toggle_button_art"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/toggle_button_community"
-        app:layout_constraintTop_toTopOf="@+id/toggle_button_community" />
-
-    <ToggleButton
-        android:id="@+id/toggle_button_art"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginBottom="8dp"
-        android:background="@drawable/selector_art_filter"
-        android:checked="true"
-        android:text=""
-        android:textOff=""
-        android:textOn=""
-        app:layout_constraintBottom_toTopOf="@+id/frameLayout"
-        app:layout_constraintEnd_toStartOf="@+id/toggle_button_family"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/toggle_button_cooking"
-        app:layout_constraintTop_toTopOf="@+id/toggle_button_cooking" />
-
-    <ToggleButton
-        android:id="@+id/toggle_button_family"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginBottom="8dp"
-        android:background="@drawable/selector_family_filter"
-        android:checked="true"
-        android:text=""
-        android:textOff=""
-        android:textOn=""
-        app:layout_constraintBottom_toTopOf="@+id/frameLayout"
-        app:layout_constraintEnd_toStartOf="@+id/toggle_button_giving"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/toggle_button_art"
-        app:layout_constraintTop_toTopOf="@+id/toggle_button_art" />
+        app:layout_constraintTop_toTopOf="@+id/toggle_button_reward"
+        app:layout_constraintVertical_bias="0.0" />
 
     <FrameLayout
         android:id="@+id/frameLayout"

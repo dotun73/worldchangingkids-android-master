@@ -36,7 +36,6 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:text="@string/main_activity_profile_name"
-        android:textAlignment="center"
         android:textColor="@color/design_default_color_primary_dark"
         android:textStyle="bold"
         android:visibility="visible"
@@ -199,8 +198,10 @@
         android:id="@+id/container_act_of_kindness_details"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:padding="15dp"
         app:elevation="2dp"
-        android:padding="15dp"/>
+        tools:layout_editor_absoluteX="330dp"
+        tools:layout_editor_absoluteY="8dp" />
 
 
 </android.support.constraint.ConstraintLayout>

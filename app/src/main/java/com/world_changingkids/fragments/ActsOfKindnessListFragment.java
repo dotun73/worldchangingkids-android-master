@@ -39,12 +39,6 @@ public class ActsOfKindnessListFragment extends Fragment
 	/**
 	 * View elements below:
 	 */
-	private ToggleButton mGivingToggleButton;
-	private ToggleButton mListToggleButton;
-	private ToggleButton mCommunityToggleButton;
-	private ToggleButton mCookingToggleButton;
-	private ToggleButton mArtToggleButton;
-	private ToggleButton mFamilyToggleButton;
 
 	private ViewPager mViewpager;
 	private RecyclerView mViewList;
@@ -103,24 +97,6 @@ public class ActsOfKindnessListFragment extends Fragment
 
 		View v = inflater.inflate(R.layout.fragment_acts_of_kindness_list, container, false);
 
-		mGivingToggleButton = v.findViewById(R.id.toggle_button_giving);
-		mGivingToggleButton.setOnCheckedChangeListener(this);
-
-        mListToggleButton = v.findViewById(R.id.toggle_button_list);
-        mListToggleButton.setOnCheckedChangeListener(this);
-
-		mCommunityToggleButton = v.findViewById(R.id.toggle_button_community);
-		mCommunityToggleButton.setOnCheckedChangeListener(this);
-
-		mCookingToggleButton = v.findViewById(R.id.toggle_button_cooking);
-		mCookingToggleButton.setOnCheckedChangeListener(this);
-
-		mArtToggleButton = v.findViewById(R.id.toggle_button_art);
-		mArtToggleButton.setOnCheckedChangeListener(this);
-
-		mFamilyToggleButton = v.findViewById(R.id.toggle_button_family);
-		mFamilyToggleButton.setOnCheckedChangeListener(this);
-
 		mViewpager = v.findViewById(R.id.aok_view_pager);
         mViewList = v.findViewById(R.id.r_view_List);
 
@@ -138,20 +114,6 @@ public class ActsOfKindnessListFragment extends Fragment
 	@Override
 	public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
 		switch (buttonView.getId()) {
-			case R.id.toggle_button_giving:
-				mCategoryFilterStatus.put(ActOfKindness.ActOfKindnessCategory.GIVING, isChecked);
-				break;
-			case R.id.toggle_button_community:
-				mCategoryFilterStatus.put(ActOfKindness.ActOfKindnessCategory.COMMUNITY, isChecked);
-				break;
-			case R.id.toggle_button_cooking:
-				mCategoryFilterStatus.put(ActOfKindness.ActOfKindnessCategory.COOKING, isChecked);
-				break;
-			case R.id.toggle_button_art:
-				mCategoryFilterStatus.put(ActOfKindness.ActOfKindnessCategory.ART, isChecked);
-				break;
-			case R.id.toggle_button_family:
-				mCategoryFilterStatus.put(ActOfKindness.ActOfKindnessCategory.FAMILY, isChecked);
             case R.id.toggle_button_list:
                 mCategoryFilterStatus.put(ActOfKindness.ActOfKindnessCategory.LISTVIEW, isChecked);
                 if (isChecked){

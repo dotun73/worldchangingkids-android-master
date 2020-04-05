@@ -3,7 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/worldchangingkids-android-master.iml" filepath="$PROJECT_DIR$/worldchangingkids-android-master.iml" />
+      <module fileurl="file://$PROJECT_DIR$/worldchangingkids-android-master.iml" filepath="$PROJECT_DIR$/worldchangingkids-android-master.iml" group="worldchangingkids-android-master" />
+      <module fileurl="file://$PROJECT_DIR$/app/worldchangingkids-android-master-app.iml" filepath="$PROJECT_DIR$/app/worldchangingkids-android-master-app.iml" group="worldchangingkids-android-master/app" />
     </modules>
   </component>
 </project>
